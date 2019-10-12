@@ -283,7 +283,7 @@
       "sold_out": "Uitverkocht",
       "unavailable": "Niet beschikbaar",
       "on_sale": "",
-      "on_sale_from_html": "In sale van {{ price }}",
+      "on_sale_from_html": "}",
       "from_text_html": "Vanaf {{ price }}",
       "quantity": "Aantal",
       "add_to_cart": "In winkelmandje"

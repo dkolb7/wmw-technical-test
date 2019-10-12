@@ -19,7 +19,6 @@ html {
 
 body {
   font-family: $font-body;
-  // font-family: 'helevtica-neue', sans-serif;
   font-weight: $font-body-weight;
   font-style: $font-body-style;
   font-size: 18px;
@@ -44,7 +43,6 @@ button,
 select {
   -webkit-font-smoothing: antialiased;
   text-size-adjust: 100%;
-  // font-family: 'helevtica-neue', sans-serif;
 }
 
 a:focus {

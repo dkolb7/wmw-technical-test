@@ -60,48 +60,50 @@ register('featured-collection', {
   },
 });
 
-
-$(document).ready(function(){
   
-  // Main coursel
-  var $main_carousel = $('.main-carousel').flickity({
-    cellAlign: 'left',
-    contain: false,
-    draggable: true,
-    groupCells: 4,
-    wrapAround: false,
-    adaptiveHeight: false,
-    arrowShape: { 
-      x0: 10,
-      x1: 60, y1: 50,
-      x2: 65, y2: 45,
-      x3: 20
-    },
-    resize: true,
-  });
+// jQuery Ready
+$(document).ready(function(){
 
-  // change number of flicky slides show 
-  function change_main_carousel_settings(numberOfSlides) {
-    $main_carousel.flickity({
-      groupCells: numberOfSlides,
+  // Changes coursel dots
+  function update_slider(number) {
+    $main_carousel = $('.main-carousel').flickity({
+      groupCells: number,
     });
   }
+  
+  // load or resize edit carousel dots
+  $(window).on('load resize', function() {
 
-  // Depending on window size
-  window.addEventListener('resize', function() {
     let body_width = document.querySelector('body').clientWidth;
 
-    if ( body_width >= 769) {
-      change_main_carousel_settings(4);
+    if ( body_width >= 1024 && body_width > 769) {
+      update_slider(4);
     }
 
-    if ( body_width <= 768 && body_width >= 577) {
-      change_main_carousel_settings(2);
-    }
+    if (body_width <= 768 && body_width >= 577) {
+      update_slider(2);
+    } 
 
     if (body_width <= 576) {
-      change_main_carousel_settings(1);
+      update_slider(1);
     }
-  })
+
+    // Init carousel
+    let $main_carousel= $('.main-carousel').flickity({
+        cellAlign: 'left',
+        contain: false,
+        draggable: true,
+        groupCells: 4,
+        wrapAround: false,
+        adaptiveHeight: false,
+        arrowShape: { 
+          x0: 10,
+          x1: 60, y1: 50,
+          x2: 65, y2: 45,
+          x3: 20
+        },
+        resize: true,
+      });
+  });
 
 });

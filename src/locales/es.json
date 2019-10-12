@@ -284,7 +284,7 @@
       "sold_out": "Agotado",
       "unavailable": "No disponible",
       "on_sale": "En oferta",
-      "on_sale_from_html": "En oferta desde {{ price }}",
+      "on_sale_from_html": "",
       "from_text_html": "De {{ price }}",
       "quantity": "Cantidad",
       "add_to_cart": "Agregar al carrito"

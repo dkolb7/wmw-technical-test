@@ -5,8 +5,6 @@
  *
  */
 .featured-collection {
-  margin-bottom: 300px;
-
   .inner-wrapper {
   	padding: 0 11px;
   	width: 100%;
@@ -48,7 +46,6 @@
   }
 
   .product-information {
-  	// margin-bottom: 1.889em;
   	margin-bottom: 15px;
   }
 
@@ -125,7 +122,7 @@
 	background: $color-dark-blue;
 	font-family: $font-body;
 	color: $color-white;
-	padding: 5px 10px;
+	padding: 5px 14px;
 	position: absolute;
 	top: 10px;
 	right: 10px;

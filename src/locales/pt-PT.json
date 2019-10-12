@@ -280,7 +280,7 @@
       "sold_out": "Esgotado",
       "unavailable": "Indisponível",
       "on_sale": "",
-      "on_sale_from_html": "Em promoção, a partir de {{ price }}",
+      "on_sale_from_html": "",
       "from_text_html": "A partir de {{ price }}",
       "quantity": "Quantidade",
       "add_to_cart": "Adicionar ao carrinho"

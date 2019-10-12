@@ -276,7 +276,7 @@
       "sold_out": "Sold Out",
       "unavailable": "Unavailable",
       "on_sale": "",
-      "on_sale_from_html": "On Sale from {{ price }}",
+      "on_sale_from_html": "",
       "from_text_html": "From {{ price }}",
       "quantity": "Quantity",
       "add_to_cart": "Add to Cart"

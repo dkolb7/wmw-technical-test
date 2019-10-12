@@ -279,7 +279,7 @@
       "sold_out": "Udsolgt",
       "unavailable": "Ikke Tilgængelig",
       "on_sale": "",
-      "on_sale_from_html": "På Tilbud fra {{ price }}",
+      "on_sale_from_html": "",
       "from_text_html": "Fra {{ price }}",
       "quantity": "Antal",
       "add_to_cart": "Tilføj til Kurv"
