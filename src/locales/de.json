@@ -284,7 +284,7 @@
       "regular_price": "Normaler Preis",
       "sold_out": "Ausverkauft",
       "unavailable": "Nicht verfügbar",
-      "on_sale": "Im Angebot",
+      "on_sale": "",
       "on_sale_from_html": "Im Angebot ab {{ price }}",
       "from_text_html": "Von {{ price }}",
       "quantity": "Menge",

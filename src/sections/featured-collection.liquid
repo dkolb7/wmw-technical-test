@@ -6,34 +6,73 @@
 ------------------------------------------------------------------------------
 {% endcomment %}
 
-<section class="featured-collection" data-section-id="{{ section.id }}" data-section-type="featured-collection">
-  {%- assign collection = collections[section.settings.collection] -%}
+<section class="featured-collection top-and-bottom-sm-spacing" data-section-id="{{ section.id }}" data-section-type="featured-collection">
+  <div class="row-wrapper">
+    <div class="row center-xs">
+      <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
+        {%- assign collection = collections[section.settings.collection] -%}
 
-  <h2>{{ collection.title | escape }}</h2>
+        <h2>{{ collection.title | escape }}</h2>
 
-  <p>{{ collection.description }}</p>
-
-  {% for product in collection.products limit: 6 %}
-    {% assign current_variant = product.selected_or_first_available_variant %}
-  
-    <a href="{{ product.url | within: collection }}">
-      <div>
-        {% if product.featured_image != blank %}
-          {{ product.featured_image | img_url: 'large' | img_tag }}
-        {% endif %}
-        
-        <span js-ajax-cart="addToCart" data-variant-id="{{ current_variant.id }}" data-quantity="1">Add to cart</span>
+        <p>{{ collection.description }}</p>
       </div>
+    </div>
+    <div class="row product-carousel-row">
+      <div class="col-xs-12">
 
-      <div>
-        <p>{{ product.title | escape }}</p>
+        <ul class="main-carousel">
 
-        <span>
-          {% include 'product-price' %}
-        </span>
+          {% for product in collection.products limit: 6 %}
+            {% assign current_variant = product.selected_or_first_available_variant %}
+
+            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 slide">
+              <div class="inner-wrapper">
+          
+                  <a class="main-product-link" href="{{ product.url | within: collection }}">
+
+                    <div class="image-wrapper">
+
+                      <!-- Sale -->
+                      {% if product.compare_at_price > product.price %}
+                        {% if product.price_varies %}
+                          <span class="tag">Sale</span>
+                        {% endif %}
+                      {% endif %}
+
+                      <!-- Image -->
+                      {% if product.featured_image != blank %}
+                        {{ product.featured_image | img_url: 'large' | img_tag }}
+                      {% endif %}
+
+                      <div class="button-wrapper add-to-cart center">
+                        <span class="regular-button" js-ajax-cart="addToCart" data-variant-id="{{ current_variant.id }}" data-quantity="1">Add to cart</span>
+                      </div>
+                    </div>
+
+                    <div class="product-information">
+                      <h5>{{ product.title | escape }}</h5>
+
+                      <p class="price">
+                        {% include 'product-price' %}
+                      </p>
+                    </div>
+                  </a>
+
+                </div>
+              </li>
+
+          {% endfor %}
+
+        </ul>
+
+        <div class="button-wrapper center">
+          <a href="{{ collection.url }}" class="regular-button" targert="_self" data-text="View collection">View collection</a>
+        </div>
+
+        </div>
       </div>
-    </a>
-  {% endfor %}
+    </div>
+  </div>
 </section>
 
 {% schema %}

@@ -9,3 +9,92 @@
   user-select: none;
   appearance: none;
 }
+
+.button-wrapper	.regular-button {
+	text-decoration: none;
+	font-family: $font-body;
+	font-weight: 700;
+	color: $color-white;
+	background: $color-dark-blue;
+	padding: 15px 18px 17px;
+	position: relative;
+	overflow: hidden;
+	font-size: 0.7778em;
+	line-height: 1.214em;
+
+	@include transition(400ms all $cubic);
+
+	&::after,
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+	}
+
+	&::before {
+		content: "";
+		background: $color-dark;
+		// width: 100%;
+		height: 100%;
+		z-index: 0;
+
+		@include transition(400ms all $cubic);
+		@include transform(translate(0, 100%));
+	}
+
+	&::after {
+		content: attr(data-text);
+		font-family: $font-body;
+		font-size: 0.7778em;
+		line-height: 1.214em;
+		z-index: 1;
+		color: $color-white;
+		text-align: left;
+		padding: 15px 18px 17px;
+
+		@include transition(700ms all $cubic);
+		@include transform(translate(0, 100%));
+	}
+
+	&:hover {
+		&::before {
+			@include transform(translate(0, 0));		
+			@include transition(400ms all $cubic);
+		}
+
+		&::after {
+			@include transform(translate(0, 0));
+			@include transition(700ms all $cubic);		
+		}
+	}
+}
+
+.add-to-cart .regular-button {
+	width: 100%;
+	background: $color-white;
+	color: $color-dark-blue;
+
+	&::after,
+	&::before {
+		content: "";
+		background: none;
+	}
+}
+
+.add-to-cart .regular-button,
+.button-wrapper.center {
+	@include flexbox();
+	@include justify-content(center);
+	@include align-items(center);	
+}
+
+@media (min-width: 1025px) {
+	.button-wrapper	.regular-button::after,
+	.button-wrapper	.regular-button {
+		font-size: 1em;
+		line-height: 1.277em;
+	}
+}

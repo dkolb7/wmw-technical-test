@@ -13,3 +13,43 @@ body,
 html {
   height: 100%;
 }
+
+section > .row-wrapper {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+section.fluid > .row-wrapper {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.top-and-bottom-sm-spacing {
+	padding-top: 59px;
+	padding-bottom: 45px;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+main ul {
+	padding-left: 0;
+	list-style: none;
+	padding-left: 0;
+}
+
+.product-carousel-row {
+	[class*=col-] {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (min-width: 1025px) {
+	section > .row-wrapper {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+}

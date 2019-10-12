@@ -1,12 +1,29 @@
+@font-face {
+  font-family: 'Helvetica Neue Regular';
+  src: url('~/fonts/HelveticaNeue.ttf') format("opentype");
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Medium';
+  src: url('~/fonts/HelveticaNeueMed.ttf') format("opentype");
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+  src: url('~/fonts/HelveticaNeuBold.ttf') format("opentype");
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   font-family: $font-body;
+  // font-family: 'helevtica-neue', sans-serif;
   font-weight: $font-body-weight;
   font-style: $font-body-style;
-  font-size: 1.6rem;
+  font-size: 18px;
+  color: $color-dark;
 }
 
 h1,
@@ -16,6 +33,8 @@ h4,
 h5,
 h6 {
   font-family: $font-heading;
+  color: $color-dark-blue;
+  margin-top: 0;
 }
 
 body,
@@ -25,8 +44,83 @@ button,
 select {
   -webkit-font-smoothing: antialiased;
   text-size-adjust: 100%;
+  // font-family: 'helevtica-neue', sans-serif;
 }
 
 a:focus {
   color: inherit;
+}
+
+h1 {
+	font-size: 1.5556em;
+	line-height: 1.2142em;
+}
+
+h2 {
+	font-size: 1.33em;
+	line-height: 1.2083em;
+	margin-bottom: 0.34em;
+}
+
+h3 {
+	font-size: 1.167em;
+}
+
+h4 {
+	font-size: 1em;
+	line-height: 1.2778em;
+}
+
+h5 {
+	font-size: 0.8889em;
+	line-height: 1.1875em;
+}
+
+h6 {
+	font-size: 0.7778em;
+	line-height: 0.2143em;
+}
+
+p {
+	font-size: 0.7778em;
+	line-height: 1.5em;
+	margin-top: 0;
+}
+
+@media (min-width: 1025px) {
+	h1 {
+		font-size: 2.22em;
+		line-height: 1.225em;
+	}
+
+	h2 {
+		font-size: 2.22em;
+		line-height: 1.22em;
+		margin-bottom: 0.48em;
+	}
+
+	h3 {
+		font-size: 1.667em;
+		line-height: 1.233em;
+	}
+
+	h4 {
+		font-size: 1.33em;
+		line-height: 1.02833em;
+	}
+
+	h5 {
+		font-size: 1.167em;
+	}
+
+	h6 {
+		font-size: 1em;
+		font-size: 1.2777em;
+	}
+
+	p {
+		font-size: 1em;
+		line-height: 1.44em;
+		margin-bottom: 1.11em;
+	}
 }

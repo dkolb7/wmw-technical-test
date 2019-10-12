@@ -282,7 +282,7 @@
       "regular_price": "Normale prijs",
       "sold_out": "Uitverkocht",
       "unavailable": "Niet beschikbaar",
-      "on_sale": "Sale",
+      "on_sale": "",
       "on_sale_from_html": "In sale van {{ price }}",
       "from_text_html": "Vanaf {{ price }}",
       "quantity": "Aantal",

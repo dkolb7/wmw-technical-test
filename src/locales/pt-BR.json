@@ -279,7 +279,7 @@
       "regular_price": "Preço normal",
       "sold_out": "Esgotado",
       "unavailable": "Indisponível",
-      "on_sale": "Em promoção",
+      "on_sale": "",
       "on_sale_from_html": "Em promoção, a partir de {{ price }}",
       "from_text_html": "A partir de {{ price }}",
       "quantity": "Quantidade",

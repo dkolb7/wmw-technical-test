@@ -56,6 +56,18 @@
 
   {% include 'script-tags', layout: 'theme' %}
 
+  <!-- jQuery -->
+  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+  <!-- Flickity Slider Css -->
+  {{ 'flickity.min.css' | asset_url | stylesheet_tag }}
+
+  <!-- Flickity Slider Js -->
+  {{ 'flickity.pkgd.min.js' | asset_url | script_tag }}
+
+
   {{ content_for_header }}
 </head>
 
